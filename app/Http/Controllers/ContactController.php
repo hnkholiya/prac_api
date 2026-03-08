@@ -16,4 +16,8 @@ class ContactController extends Controller
             'data' => $contacts
         ]);
     }
+
+    public function create(Request $request){
+        return "create contact post success";
+    }
 }
