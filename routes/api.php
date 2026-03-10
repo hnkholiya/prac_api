@@ -15,3 +15,5 @@ Route::get('/apidata', function(){
 Route::get('/contact',[ContactController::class,'index']);
 
 Route::post('/create', [ContactController::class,'create']);
+
+Route::put('/update/{id}', [ContactController::class,'update']);
