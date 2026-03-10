@@ -48,4 +48,16 @@ class ContactController extends Controller
 
         return response()->json(["message"=>"contact updated successfully"]);
     }
+
+
+    public function delete($id){
+        $deletecontact=Contact::destroy($id);
+
+        if(!$deletecontact){
+            return response()->json(["message"=>"contact not found"],404);
+        }
+        else{
+            return response()->json(["message"=>"contact delete successfully"]);
+        }
+    }
 }
